@@ -1,0 +1,25 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>netcoreapp3.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Statistics\Commands\**" />
+    <EmbeddedResource Remove="Statistics\Commands\**" />
+    <None Remove="Statistics\Commands\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="MediatR" Version="8.0.0" />
+    <PackageReference Include="MediatR.Extensions.Microsoft.DependencyInjection" Version="8.0.0" />
+    <PackageReference Include="Microsoft.Extensions.Options" Version="3.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\OnlineUniversity.Application.Contracts\OnlineUniversity.Application.Contracts.csproj" />
+    <ProjectReference Include="..\OnlineUniversity.Domain\OnlineUniversity.Domain.csproj" />
+  </ItemGroup>
+
+</Project>
